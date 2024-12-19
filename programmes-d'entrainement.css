@@ -1,0 +1,451 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: black;
+  text-decoration: none;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  background-image: url(pexels-rui-dias-469842-1472887.jpg);
+  background-size: cover;
+}
+/* ---------------------Navbar---------------------- */
+.navbar {
+  background-color: #bedfbfde;
+  font-size: 20px;
+  height: 65px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  transition: background-color, 0.2s;
+  z-index: 1000;
+  padding: 0 20px;
+}
+
+.navbar:hover {
+  background-color: #a3d9a5;
+}
+
+.navbar a {
+  list-style-type: none;
+  color: #000000;
+  transition: font-size 0.2s;
+  margin-right: 25px;
+  justify-content: space-between;
+}
+.navbar a:hover {
+  color: #0b909d;
+  font-size: 23px;
+}
+.logo {
+  height: 60px;
+  width: 80px;
+}
+
+/* Menu Burger - Positionnement */
+.toggle-menu {
+  display: none; /* Cacher le checkbox par défaut */
+}
+
+.burger {
+  display: none; /* Cacher le burger par défaut */
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+}
+
+.bar {
+  background-color: black;
+  height: 4px;
+  width: 100%;
+}
+
+/* Menu en mode mobile */
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 100px;
+  align-items: center;
+  margin-right: 50px;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none; /* Cacher le menu par défaut */
+    flex-direction: column;
+    width: 100%;
+    background-color: #bedfbfde;
+    position: absolute;
+    top: 65px;
+    right: 0;
+    padding: 10px 20px;
+    margin-right: 0;
+  }
+
+  .menu a {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+
+  /* Afficher le burger en mode mobile */
+  .burger {
+    display: flex;
+    margin-right: 50px;
+  }
+
+  /* Lorsque le checkbox est coché, afficher le menu */
+  .toggle-menu:checked + .burger + .menu {
+    display: flex;
+  }
+}
+
+/* -------------------------contenu------------------------------- */
+
+.header {
+  margin: 75px 150px 100px 150px;
+  border-radius: 8px;
+  text-align: center;
+  padding: 2rem;
+  opacity: 1;
+  background-color: #a3d9a5d1;
+  color: #fff;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 22px;
+}
+/* --------------------------carte1----------------------------- */
+
+.container-main {
+  margin-top: 150px;
+}
+
+.container-main .container-menu .menu h4 {
+  text-align: center;
+  color: #000000;
+  text-decoration: none;
+  font-size: x-large;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+
+.container-menu .menu p {
+  color: #4a4a4a;
+  font-size: 24px;
+}
+
+.container-menu {
+  display: flex;
+  flex-direction: row;
+  margin: 2%;
+  justify-content: space-evenly;
+}
+
+.container-menu .menu {
+  margin: 10px;
+  display: block;
+  background-color: #a3d9a5;
+  border: 1px solid #bdbdbd;
+  border-radius: 15px;
+  padding: 20px;
+  width: 500px;
+  transition: 0.5s;
+}
+
+.container-menu .menu:hover {
+  box-shadow: 0px 3px 10px;
+}
+
+.container-menu .menu2 {
+  margin: 10px;
+  display: block;
+  background-color: #f9f9f9;
+  border: 1px solid #bdbdbd;
+  border-radius: 100%;
+  padding: 20px;
+  width: 500px;
+  background-image: url(pexels-prasanthinturi-1051838.jpg);
+  background-size: 80vh;
+  transition: background-size, 0.5s;
+}
+
+.container-menu .menu2:hover {
+  box-shadow: 0px 3px 10px;
+  background-size: 90vh;
+}
+
+.menu2 p {
+  color: #4a4a4a;
+}
+
+/* -------------------------------carte2-------------------------------- */
+
+.container-main .container-menu2 {
+  margin-top: 150px;
+}
+
+.container-main .container-menu2 .menu2 h4 {
+  text-align: center;
+  color: #000000;
+  text-decoration: none;
+  font-size: x-large;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+
+.container-menu2 .menu2 p {
+  color: #4a4a4a;
+  font-size: 24px;
+}
+
+.container-menu2 {
+  display: flex;
+  flex-direction: row;
+  margin: 2%;
+  justify-content: space-evenly;
+}
+
+.container-menu2 .menu {
+  margin: 10px;
+  display: block;
+  border: 1px solid #bdbdbd;
+  border-radius: 100%;
+  width: 500px;
+  background-image: url(pexels-leonardo-vazquez-1427877-2807963.jpg);
+  background-size: 95vh;
+  transition: background-size, 0.5s;
+}
+
+.container-menu2 .menu:hover {
+  box-shadow: 0px 3px 10px;
+  background-size: 105vh;
+}
+
+.container-menu2 .menu2 {
+  margin: 10px;
+  display: block;
+  background-color: #f9f9f9;
+  border: 1px solid #bdbdbd;
+  border-radius: 15px;
+  padding: 20px;
+  width: 500px;
+  background-color: #a3d9a5;
+  transition: 0.5s;
+}
+
+.container-menu2 .menu2:hover {
+  box-shadow: 0px 3px 10px;
+}
+
+.container-menu2 .menu2 p {
+  color: #4a4a4a;
+}
+
+/* ---------------------------------carte3----------------------------- */
+
+.container-main {
+  margin-top: 150px;
+}
+
+.container-main .container-menu3 .menu h4 {
+  text-align: center;
+  color: #000000;
+  text-decoration: none;
+  font-size: x-large;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+
+.container-menu3 .menu p {
+  color: #4a4a4a;
+  font-size: 24px;
+}
+
+.container-menu3 {
+  display: flex;
+  flex-direction: row;
+  margin: 2%;
+  justify-content: space-evenly;
+}
+
+.container-menu3 .menu {
+  margin: 10px;
+  display: block;
+  background-color: #a3d9a5;
+  border: 1px solid #bdbdbd;
+  border-radius: 15px;
+  padding: 20px;
+  width: 500px;
+  transition: 0.5s;
+}
+
+.container-menu3 .menu:hover {
+  box-shadow: 0px 3px 10px;
+}
+
+.container-menu3 .menu2 {
+  margin: 10px;
+  display: block;
+  background-color: #f9f9f9;
+  border: 1px solid #bdbdbd;
+  border-radius: 100%;
+  padding: 20px;
+  width: 500px;
+  background-image: url(pexels-mvdheuvel-2284163.jpg);
+  background-size: 95vh;
+  transition: background-size, 0.5s;
+}
+
+.menu2:hover {
+  box-shadow: 0px 3px 10px;
+  background-size: 105vh;
+}
+
+.menu2 p {
+  color: #4a4a4a;
+}
+
+@media (max-width: 768px) {
+  .container-main {
+    display: none;
+  }
+}
+
+/* pour le mode responsive */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 90%;
+  max-width: 650px;
+  margin-left: 35px;
+  margin-top: 100px;
+}
+.card {
+  background-color: #a3d9a5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+}
+.card img {
+  width: 100%;
+  height: auto;
+}
+.card .content {
+  padding: 15px;
+}
+.card .title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+.card .description {
+  font-size: 23px;
+  color: #666;
+  line-height: 1.6;
+  text-align: left;
+}
+.description-détaillée {
+  text-align: left;
+  color: #666;
+  font-size: 23px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    display: none;
+  }
+}
+
+/* -------------------Footer------------------------ */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 150px;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  margin-top: 100px;
+  background-image: radial-gradient(
+    circle,
+    rgb(233, 235, 235) 0%,
+    rgb(233, 235, 235) 50%,
+    #9cb42c 80%,
+    #0f8d9c 100%
+  );
+}
+
+@media (max-width: 768px) {
+  .liensfooter {
+    display: none;
+  }
+}
+
+hr {
+  border: 1px solid black;
+}
+
+.liensfooter a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  display: block;
+  position: relative;
+  font-size: large;
+}
+
+.liensfooter a:hover {
+  color: #0b909d;
+  background-size: 200px;
+}
+
+footer img {
+  width: 200px;
+  height: auto;
+}
+
+/* Style pour le lien-bouton */
+
+.back-to-top {
+  position: fixed;
+  z-index: 1000;
+  bottom: 20px;
+  right: 20px;
+  background-color: #a3d9a5bd;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-top:hover {
+  background-color: #0f8d9c;
+  transform: scale(1.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#top {
+  color: transparent;
+}
